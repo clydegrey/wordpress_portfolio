@@ -1,7 +1,25 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+
+	<!-- <div class="bottomMenu">
+              <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>  
+    </div> -->
+
+	 <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'Social Link List'
+        )); ?> 
+
+
+
+
+    <p>&copy; Clyde Grey <?php echo date('Y'); ?></p>
   </div>
+
+
+
+
+
 </footer>
 
 <script>

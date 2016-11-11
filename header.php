@@ -13,6 +13,46 @@
 
 <body <?php body_class(); ?>>
 
+
+<!-- <div class="se-pre-con">tttttt</div> -->
+
+
+<div id="load" class="load">
+  <div>G</div>
+  <div>N</div>
+  <div>I</div>
+  <div>D</div>
+  <div>A</div>
+  <div>O</div>
+  <div>L</div>
+</div>
+
+
+<style>
+  
+
+
+.no-js #load { display: none;  }
+.js #load { display: block; position: absolute; left: 100px; top: 0; }
+.load {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+ 
+  /*font-size:20rem;*/
+  z-index: 9999;
+  /*background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;*/
+}
+
+
+
+
+</style>
+
+
+
 <header>
   <div class="container">
     <h1>
@@ -26,5 +66,7 @@
       'theme_location' => 'primary'
     )); ?>
   </div> <!-- /.container -->
+
+  HELLLLLLO
 </header><!--/.header-->
 

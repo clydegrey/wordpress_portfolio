@@ -26,7 +26,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'Social Link List' => 'List Title' 
 	) );
 
 	/*
@@ -51,6 +52,15 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Anton|Contrail+One|Raleway:400,600,700');
+
+	wp_enqueue_style('devicon', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css');
+
+	
+
+
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -78,14 +88,41 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
-  wp_enqueue_script(
-    'scripts', //handle
-    get_template_directory_uri() . '/js/main.min.js', //source
+   wp_enqueue_script(
+    'typed', //handle
+    get_template_directory_uri() . '/js/typed.js', //source
     array( 'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
   );
+
+    wp_enqueue_script(
+    'waypoint', //handle
+    get_template_directory_uri() . '/js/waypoint.js', //source
+    array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+    wp_enqueue_script(
+    'hoverdir', //handle
+    get_template_directory_uri() . '/js/hoverdir.js', //source
+    array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'scripts', //handle
+    get_template_directory_uri() . '/js/main.min.js', //source
+    array( 'jquery', 'plugins','typed' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
 }
+
+
+
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
 
