@@ -116,11 +116,11 @@ $colorYellowAlpha:rgba(246,174,45,.8);
 $colorBlue: rgba(11, 79, 108,1);
 $colorBlueAlpha:rgba(11, 79, 108,.8);
 
-$colorRed: rgba(191,6,3,.7);
-$colorButton: $colorBlueAlpha;
-$colorButtonBackground:$colorBlueAlpha;
-$colorButton: $colorRed;
-$colorButtonBackground:$colorRed;
+$colorBlue: #1D84B5;
+// $colorButton: $colorBlueAlpha;
+// $colorButtonBackground:$colorBlueAlpha;
+$colorButton: $colorBlue;
+$colorButtonBackground:$colorBlue;
 
 
 $font-contrail:'Contrail One', cursive;

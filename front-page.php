@@ -1,6 +1,6 @@
 <?php get_header();  ?>
 
-<div class="main" id="home">
+<div class="main">
 
 <section class="binary">
   
@@ -160,13 +160,7 @@
  
  <section class="skills" id="skills">
    <div class="skills__wrapper">
-     
-
-
-   
-  <!--  <h2><i class="fa fa-plus" aria-hidden="true"></i></h2> -->
-<!-- <h2>&amp;</h2>
- -->
+ 
 <div class="skills__box">
 
  
@@ -191,19 +185,6 @@
 
 <div class="skills__flexItem">
 
-<!-- <ul>
-
-  <li>Terminal</li>
-  <li>Gulp</li>
-  <li>Grunt</li>
-  <li>Git</li>
-  <li>GitHub</li>
-  <li>Sublime Text</li>
-  <li>WordPress</li>
-  <li>Bootstrap</li>
-</ul> -->
- 
-
 <ul class="tools__list">
   <li>Bootstrap</li>
   <li>Git</li>
@@ -214,10 +195,7 @@
   <li>Sublime Text</li>
   <li>Terminal</li>
   <li>WordPress</li>
-  
 </ul>
-
-
 </div>  
 
 
@@ -229,19 +207,38 @@
  </section>
 
 
-  <h2>CLYDE's THIS IS THE FRONT PAGE</h2>
+<section class="contact" id="contact">
+  
 
+
+
+<div class="contactBox clearfix">
+
+<div class="contactBoxGreet">
+  <h2>Contact me</h2>
+  <p>This is the part where I ask you to get in touch. Want to chat about work you need done or have some feedback on the site? Want me to whip up a codepen for anything you saw here? Drop me a line, I would love to here from you.  Use the form to the right or email me directly at 
+
+<a href="mailto:hello@cylde.codes?Subject=Hello%20Clyde" target="_top">hello[@]clyde.codes</a>
+
+
+  </p>
+</div>
+
+
+<div class="contactBoxForm">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-        <h2><?php the_title(); ?></h2>
+       <!--  <h2><?php the_title(); ?></h2> -->
         <?php the_content(); ?>
 
       <?php endwhile; // end the loop?>
-
+</div>
+</div>
     <!-- </div> /,content -->
 
    <!--  <?php get_sidebar(); ?> -->
+</section>
 
   <!-- </div> /.container -->
 </div> <!-- /.main -->

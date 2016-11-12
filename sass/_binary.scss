@@ -5,7 +5,7 @@ body {background:$colorBlack;
 
 
 .binary {
-		margin-top:-40px;
+		// margin-top:-40px;
 		
 		padding:0;
 		position:relative;
@@ -91,7 +91,7 @@ body {background:$colorBlack;
 
 .nameColor {
 	
-	color:$colorRed;
+	color:$colorBlue;
 }
 
 @keyframes showSmall {
@@ -133,7 +133,7 @@ keyframes scan {
 
 }
 
-
+.checkWork.hide:after,
 .binary__typed.hide:after{
 						  display:none;}
 
@@ -161,7 +161,7 @@ keyframes scan {
 
 .arrow:after {display:inline-block;
 		display:inline-block;
-		animation: arrow .8s forwards, blink .7s 5 4s;
+		animation: arrow .8s forwards, blink .7s 8;
 	}
 
 
