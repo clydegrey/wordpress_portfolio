@@ -4,7 +4,7 @@
     width:100%;
     // margin-bottom:-70px;
    
-
+   
     background-color:$colorWhite;
     .skills__wrapper{
               // background:url('/portfolio/wp-content/themes/wordpress_starter_theme/images/square_bg2x.png');
@@ -21,11 +21,14 @@
                   transform:translateY(-50%);
                 }
               .skills__box{
+                position:relative;
+                z-index:10;
                 width:100%;
                 display:flex;
                 font-size:1.3rem;
                 flex-wrap:no-wrap;
                 justify-content:space-around;
+
                 .skills__flexItem
                 {
                   width:50%;
@@ -36,7 +39,7 @@
                 position:relative;
                   &:before{
                     content:"Tools";
-                    color:$colorBlackAlpha;
+                    color:darken($colorGreen,13%);
                     position:absolute;
                     left:50%;
                     bottom:-8.5rem;
@@ -54,7 +57,7 @@
                    position:relative;
                    &:before{
                     content:"Skills";
-                    color:$colorGreenAlphaLight;
+                    color:$colorGreen;
                     position:absolute;
                     left:50%;
                     top:-8.5rem;
@@ -73,18 +76,22 @@
                 }
                   ul{
                    
+
+
                     margin:0;
                     padding:0;
                     list-style-type:none;
                     display:flex;
                     flex-wrap:wrap;
+                    .tools__listItem--padding {padding:1.1rem 3rem;}
                           li{
                             flex:1 1 auto;
-                            padding:1.1rem;
-                            background-color:$colorBlack;
+                            padding:1.1rem 1.3rem;
+                            background-color:darken($colorGreen,13%);
                             // color:$colorGreen;
                            color:$colorWhite;
-                            margin:2px;
+                           // border:1px solid $colorWhite;
+                            margin:0 1px;
                             
 
                             
@@ -99,6 +106,8 @@
                 }
 
               .skills__flexItem:nth-of-type(1){
+                // background:transparent;
+                transition:background 1.3s 1.3s ease;
                li{ transform: translateX(-100%) skewX(30deg) scale(.3); 
                 opacity:0;
                 background-color:$colorGreen;
@@ -109,6 +118,8 @@
 
 
                .skills__flexItem:nth-of-type(2){
+                // background:transparent;
+                transition:background 1.3s 1.3s ease;
                li{ transform: translateX(100%) skewX(-30deg) scale(.3);
                 opacity:0; 
                  
@@ -125,15 +136,28 @@
 
 .skills.initiateAnimation{
 
-  // background:$colorWhite;
+// .skills__wrapper .skills__box {z-index:1000; position:relative;}
 
- .skills__flexItem:nth-of-type(1) li{
+ .skills__wrapper .skills__box  .skills__flexItem:nth-of-type(1)
+ {background:lighten($colorGreen,20%);
+  // z-index:100;
+ 
+
+   li{
   animation: inFromLeft 1.4s forwards;
+ }
+
 }
 
-.skills__flexItem:nth-of-type(2) li {
+.skills__flexItem:nth-of-type(2){ 
+  background:lighten($colorGreen,20%);
+
+
+  li {
   animation: inFromRight 1.4s forwards;
 }
+}
+
 
 }
 
@@ -186,20 +210,27 @@
 
 @media screen and (max-width: 700px){
 
+#skills .tools__listItem--padding {padding-right:2.1rem;
+                              padding-left:1rem;
+                            }
+
   h2  i.fa {opacity:0;}
   .skills .skills__wrapper .skills__box .skills__flexItem{
 
+     ul li {
+            padding:1.1rem 1.1rem;
+            width:100%}
      
      .skills__list:before{
                     left:100%;
                     // bottom:0;
-                    top:-5.5rem;
-                    font-size:6.5rem;
+                    top:-7.5rem;
+                    font-size:8rem;
                   }
     .tools__list:before{
                     left:0;
-                    bottom:-9.5rem;
-                    font-size:6.5rem;
+                    bottom:-7.5rem;
+                    font-size:8rem;
                   }
 
 

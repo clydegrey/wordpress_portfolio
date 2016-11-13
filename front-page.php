@@ -186,15 +186,19 @@
 
 <ul class="skills__list">
 
-  <li>AJAX APIs</li>
-  <li>CSS3</li>
-  <li>HTML5</li>
-  <li>JavaScript</li>
-  <li>jQuery</li>
+  
   <li>PHP</li>
-  <li>React</li>
-  <li>Responsive design</li>
+  <li>CSS3</li>
   <li>Sass</li>
+  <li>HTML5</li>
+  <li>React</li>
+   <li>AJAX API</li>
+   <li>jQuery</li>
+
+  
+  <li>JavaScript</li>  
+  <li>Responsive design</li>
+  
 </ul>
 </div>  
 
@@ -203,15 +207,25 @@
 <div class="skills__flexItem">
 
 <ul class="tools__list">
-  <li>Bootstrap</li>
+  
+ 
+ 
+
+ 
+ 
+  
   <li>Git</li>
-  <li>GitHub</li>
-  <li>Grunt</li>
   <li>Gulp</li>
+  <li>Grunt</li>
+  <li>GitHub</li>
   <li>Sketch</li>
-  <li>Sublime Text</li>
   <li>Terminal</li>
+  <li>Bootstrap</li>
   <li>WordPress</li>
+  <li class="tools__listItem--padding" >Sublime Text3</li>
+
+  
+ 
 </ul>
 </div>  
 
