@@ -148,7 +148,19 @@ $('.menu-icon').on('click', function(e) {
         },
         offset: 350
     });
+
+     var waypointWork = new Waypoint({
+        element: document.getElementById('workThumbs'),
+        handler: function() {
+            $('.workThumbs').removeClass('workThumbsOffScreen');
+            console.log('entered');
+        },
+        offset:'60%'
+    });
+
+
 };
+
 
 
 

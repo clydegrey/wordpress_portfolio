@@ -100,8 +100,9 @@ header ul.menu{
 				justify-content:space-between;
 				li{width:100%;
 					background:darken($colorGreen,13%);
-					
+					margin:0;
 					padding-bottom:1rem;
+					padding-right:1.5rem;
 					
 					font-size:2.5rem;
 					&:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3){
@@ -146,7 +147,7 @@ header ul.menu{
 		ul.menu {
 				display:flex;
 				transition:all .3s  ease-out;
-				
+				box-shadow: -1px 55px 157px -15px rgba(117, 117, 117, 0.73);
 				transform:translateY(0px);
 		}
 

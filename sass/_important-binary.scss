@@ -38,27 +38,6 @@ body {background:$colorBlack;
 		}
 		}
 
-// .workThumbs li img {transition:all .5s .5s ease;
-// 					backface-visibility: hidden;}
-// .workThumbs li:hover img {transform:scale(1.01) translateZ(0);
-// 						  }
-
-.workThumbs li {transition:all .8s ease, opacity 1.6s ease;
-				transform:translateX(0);
-				opacity:1;}
-// .workThumbs li:nth-of-type(3),
-// .work .workThumbs li:nth-of-type(4) {transition-delay:.2s;}
-
-.workThumbsOffScreen{
- li:nth-of-type(odd){
-	transform:translateX(-100%);
-	opacity:0;
-}
-li:nth-of-type(even){
-	transform:translateX(100%);
-	opacity:0;
-}
-}
 
 
 
@@ -356,22 +335,10 @@ keyframes scan {
 @media screen and (max-width: 600px) {
   
   body {}
- .binary {
-		.binary__image{		
-						opacity:0;}
-overflow:hidden;
-.binary__back {width:100%;
-				left:-90%;
-				top:5%;
- }
-
- .binary__typedContainer {
- 	left:0px;
- 	width:100vw;
- }
-}
 .work		{
 				.workThumbs li {flex:1 1  100%;
+				
+				
 				&:nth-of-type(1) {order:1;}
 				&:nth-of-type(2) {order:2;}
 				&:nth-of-type(3) {order:4;}

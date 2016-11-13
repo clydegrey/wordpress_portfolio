@@ -38,7 +38,7 @@
 
 <section class="work" id="work">
 
-                <ul id="workThumbs" class="workThumbs">
+                <ul id="workThumbs" class="workThumbs workThumbsOffScreen">
                     <li class="wordBox">
       <!--  <aside>
             <section>
@@ -49,12 +49,12 @@
     <h2>Marvel Comics API</h2>
     <h3>Fully interactive Web App</h3>
     <p>Accessing Marvel's API I've developed an app that will create a custom collage of up to 20 different comic book covers based on user input. I then use HTML Canvas to convert the image into a jpeg which the user can download. Fun to design and code.</p>
-    <div class="iconBox">
+    <aside class="iconBox">
     <i class="devicon-javascript-plain"></i>
     <i class="devicon-jquery-plain-wordmark"></i>
     <i class="devicon-sass-original"></i>
     <i class="fa fa-mobile icon"></i>
-    </div>
+    </aside>
    <!--    </section>            
          </aside>  -->
                             <div class="clyde"><span></span></div>
@@ -94,13 +94,13 @@
     <h2>Preach</h2>
     <h3>Multi-Page WordPress Theme</h3>
     <p>This was a collaborative project with myself and Kelvin Li. Tools used were Git and GitHub. All custom WordPress fields. Easily changed to suit many purposes.</p>
-    <div class="iconBox">
+    <aside class="iconBox">
     <i class="devicon-php-plain"></i>
     <i class="devicon-wordpress-plain-wordmark"></i>
       <i class="devicon-git-plain-wordmark"></i>
       <i class="devicon-github-plain-wordmark"></i>
       <i class="fa fa-mobile icon"></i>
-      </div>
+      </aside>
                             <div class="clyde"><span></span></div>
                         </a>
                     </li>
@@ -112,13 +112,13 @@
      <h2>Krafty Labs</h2>
     <h3>Responsive Single Page </h3>
     <p>I took some time making making the user interactions fun. I challenged myself to make the mobile experience better than the desktop. Gulp and Sass allowed this to be mostly done in less than 2 days.</p>
-    <div class="iconBox">
+    <aside class="iconBox">
     <i class="devicon-html5-plain-wordmark"></i>
     <i class="devicon-javascript-plain"></i>
     <i class="devicon-sass-original"></i>
     <i class="devicon-gulp-plain"></i>
     <i class="fa fa-mobile icon"></i>
-    </div>
+    </aside>
                             <div class="clyde"><span></span></div>
                         </a>
                     </li>
@@ -162,12 +162,12 @@
      <h2>Pitch</h2>
     <h3>Responsive Multi Page </h3>
     <p>Three pages, all responsive, contact form, map, sortable portfolio items and lots of CSS tweens. Some were explicit in the PSD while other interactions I extrapolated based on patterns I detected in the design.</p>
-    <div class="iconBox">
+    <aside class="iconBox">
     <i class="devicon-html5-plain-wordmark"></i>
     <i class="devicon-css3-plain-wordmark"></i>
     <i class="devicon-javascript-plain"></i>
     <i class="devicon-jquery-plain-wordmark"></i> <i class="fa fa-mobile icon"></i>
-    </div>
+    </aside>
                             <div class="clyde"><span></span></div>
                         </a>
                     </li>
