@@ -135,6 +135,12 @@ $('a').on('click', function(event) {
     } 
   });
 
+$('.menu-icon').on('click', function(e) {
+  $('.header__navigationBar').toggleClass('openMenu');
+
+});
+
+
     var waypoint = new Waypoint({
         element: document.getElementById('skills'),
         handler: function() {
@@ -142,8 +148,6 @@ $('a').on('click', function(event) {
         },
         offset: 350
     });
-
-
 };
 
 

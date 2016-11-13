@@ -13,7 +13,7 @@
 
 
 
-    <p>&copy; Clyde Grey <?php echo date('Y'); ?></p>
+    <p>&copy; <span class="copy">clyde grey <?php echo date('Y'); ?></span></p>
   </div>
 
 

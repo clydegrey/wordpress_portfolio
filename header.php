@@ -54,7 +54,8 @@
 
 
 <header id="home">
-  <div class="container">
+
+  <div class="header__navigationBar">
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
@@ -65,8 +66,16 @@
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
-  </div> <!-- /.container -->
+ 
 
-  HELLLLLLO
+<div class="menu-icon">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+
+
+ </div>
 </header><!--/.header-->
 

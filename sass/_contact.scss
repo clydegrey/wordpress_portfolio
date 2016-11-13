@@ -1,14 +1,20 @@
 
 .contact{
   width:100%;
-  padding-top:100px;
-  max-width:1280px;
+  padding-top:75px;
+  // max-width:1280px;
   margin:0 auto;
   color:$colorWhite;
+  // border:1px solid red;
+
+// background-image:
+
+
 
 .contactBox{
-  
+   max-width:1280px;
   display:flex;
+  margin:0 auto;
   flex-wrap:no-wrap;
   justify-content:space-between;
 }
@@ -35,6 +41,8 @@ h2{
   }
   p {line-height:1.8;
     font-size:1.2rem;
+    color:$colorGreen;
+    font-weight:600;
     padding:50px 20px;
     position:relative;
     z-index:10;}
@@ -54,7 +62,9 @@ h2{
  width:100%;
 
 
-
+textarea{
+  resize:none;
+}
 
   input[type=email],
   input[type=text], textarea {
@@ -62,7 +72,7 @@ h2{
   display:inline-block;
         width:100%;
   background:$colorGreenAlpha;
-  font-size:1.2rem;
+  font-size:1.3rem;
   font-family:monospace;
   text-transform:uppercase;
   -webkit-transition: all 0.30s ease-in-out;
@@ -87,8 +97,6 @@ input[type=text]:focus, textarea:focus {
 
 .wpcf7-submit {background:$colorBlue;
               color:$colorWhite;
-              // font-family:$font-raleway;
-              // font-weight:900;
               font-family:monospace;
               text-transform:uppercase;
               padding:.5rem;
@@ -97,17 +105,84 @@ input[type=text]:focus, textarea:focus {
             }
 }
 
-// ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-//   padding-left:1rem;
-// }
-// ::-moz-placeholder { /* Firefox 19+ */
-//   padding-left:1rem;
-// }
-// :-ms-input-placeholder { /* IE 10+ */
-//   padding-left:1rem;
-// }
-// :-moz-placeholder { /* Firefox 18- */
-//  padding-left:1rem;
-// }
+
 
 }
+
+.contact {position:relative;
+          overflow-y: hidden;}
+.contactBoxGreet:before{
+  content:"";
+  width:190vw;
+  font-size:100px;
+  height:400px;
+  background:$colorWhite;
+  
+  position:absolute;
+  top:-82%;
+  right:-1%;
+  z-index:-1;
+  transform:rotate(-16.8deg);
+  
+  transform-origin:bottom right;
+}
+
+.contact:after{
+  content:"";
+  width:170vw;
+  font-size:100px;
+  height:140px;
+   background:$colorWhite;
+
+   
+   margin-left:5vw;
+  position:absolute;
+  top:-60px;
+  right:-50vw;
+  z-index:-1;
+  transform:rotate(0deg);
+  }
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $colorBlue;
+ 
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $colorBlue;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $colorBlue;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $colorBlue;
+}
+
+
+
+@media screen and (max-width: 700px){
+.contact {padding-top:0;}
+.contactBoxGreet:before{
+  right:-10%;
+}
+.contact .contactBoxGreet{
+  h2{
+  font-size:4rem;
+  padding:0 1rem;
+  }
+}
+.contact .wpcf7-form {
+            padding:.5rem;
+            }
+.contactBox{flex-wrap:wrap;
+            justify-content:space-around;}
+.contact .contactBoxGreet,
+.contact .contactBoxForm {
+                         width:100%;
+                          }
+.contact .wpcf7-submit {
+              font-size:1.5rem;
+            }
+
+}
+

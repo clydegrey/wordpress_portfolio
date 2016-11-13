@@ -5,13 +5,15 @@ body {background:$colorBlack;
 
 
 .binary {
-		// margin-top:-40px;
 		
+		max-width:1280px;
 		padding:0;
 		position:relative;
 		width:100%;
+		margin:0 auto;
 		overflow-X:hidden;
 		background:$colorBlack;
+
 		.binary__back {
 			position:absolute;
 			min-width:1280px;
@@ -19,12 +21,14 @@ body {background:$colorBlack;
 			top:0;
 			left:0;
 			z-index:5;
+			
 		}
 		.binary__image {
 			background:$colorBlack;
 			background-repeat:no-repeat;
 			min-width:1280px;
 			max-width:1280px;
+			margin:0 auto 40px auto;
 			transition:all .4s ease;
 			transition-delay:2.2s;
 			position:relative;
@@ -34,10 +38,6 @@ body {background:$colorBlack;
 		}
 		}
 
-.cc {position:absolute;
-	top:0;
-	left:0;
-    opacity:0;}
 
 .binary__typed {font-family:monospace;
 				font-size:10.4px;
@@ -139,9 +139,9 @@ keyframes scan {
 
 
 @keyframes blink {
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
+  0% { opacity:0; }
+  50% { opacity:1; }
+  100% { opacity:0; }
 }
 .checkWork:after,
 .binary__typed:after {
@@ -183,22 +183,49 @@ keyframes scan {
 }
 }
 .work {
+	max-width:1280px;
+	margin:0 auto;
+	margin-top:120px;
       .workThumbs {
     list-style: none;
     width: 100%;
     position: relative;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;;
     padding: 0;
     display:flex;
     flex-wrap:wrap;
     min-height:100%;
     height:100%;
+    position:relative;
+	&:before{
+		content:"Recent work";
+		position:absolute;
+		color:$colorGreenAlpha;
+		
+		display:inline-block;
+		width:100%;
+                   
+                    // left:-10px;
+                    top:-8rem;
+                    // transform:translate(-50%,0);
+                    
+                    font-family:$font-raleway;
+
+                    font-weight:900;
+                    letter-spacing:-3px;
+                   
+                    font-size:5rem;
+                    z-index:-1;
+
+	}
+   
 }
 
 .workThumbs li {
+	
 
-
-	.imageLink {cursor:default;}
+	.imageLink {cursor:default;
+				}
 
 	a{color:$colorWhite;
 	  height:100%;}
@@ -208,8 +235,13 @@ keyframes scan {
     width:50%;
     flex: 1 1 50%;
     min-height:100%;
+    display:inline-block;
+    padding:0;
 	img{object-fit: cover;
-	    height:100%;}
+	    height:100%;
+	    display:inline-block;
+
+	}
 
 
 }
@@ -235,7 +267,15 @@ keyframes scan {
     top:-100%;
 }
 
+.disabled {
+	cursor:default;
+	pointer-events:none;
+}
+
 		.wordBox       {
+
+
+
 						background-color:$colorBlack;
 						// background:url('/portfolio/wp-content/themes/wordpress_starter_theme/images/darkgeo.png');
 						color:$colorWhite;
@@ -245,22 +285,32 @@ keyframes scan {
 						box-sizing:border-box;
 						padding:5%;
 						text-align:right;
-						p{padding:1rem 1rem;}
+						p{padding:1rem 2rem 1rem 2rem;}
+						.iconBox {padding:0 2rem;
+							
+							display:flex;
+							flex-wrap:no-wrap;
+							justify-content:flex-end;
+
+							margin:0 auto;}
 						i {font-size:2.5rem;
-							padding: 0 1rem 0 1rem;
+							padding: 0 0 0 1rem;
+							
 						}
+						
 						h2{
 							font-family:$font-contrail;
 							font-style:normal;
 							font-size:1.9rem;
 							margin-bottom:0;
-							padding:0 1rem;
+							padding:0 2rem;
 							position:relative;
 							z-index:10;
+							margin-top:15%;
 						}
 						h3{
 							margin:.5rem 0 0 0;
-							padding:0 1rem;
+							padding:0 2rem;
 							position:relative;
 							z-index:10;
 						}
@@ -268,15 +318,42 @@ keyframes scan {
 
 			.wordBox:nth-of-type(2n+0)
 					{
-						text-align:left;	
+						text-align:left;
+						.iconBox{justify-content:flex-start;
+							i{padding:0 1rem 0 0;
+
+								}
+							}
 					}
 
 }
 
 
 
+@media screen and (max-width: 600px) {
+  
+  body {}
+.work		{
+				.workThumbs li {flex:1 1  100%;
+				
+				
+				&:nth-of-type(1) {order:1;}
+				&:nth-of-type(2) {order:2;}
+				&:nth-of-type(3) {order:4;}
+				&:nth-of-type(4) {order:3;}
+				&:nth-of-type(5) {order:5;}
+				&:nth-of-type(6) {order:6;}
+				&:nth-of-type(7) {order:8;}
+				&:nth-of-type(8) {order:7;}
+				&:nth-of-type(9) {order:9;}
+				&:nth-of-type(10) {order:10;}
+				.iconBox {margin-bottom:3rem;}
 
+			}
+.workThumbs:before {font-size:3.8rem;}
+}
 
+}
 
 
 
