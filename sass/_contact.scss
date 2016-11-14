@@ -1,13 +1,41 @@
 
+.contact div.wpcf7-mail-sent-ok {
+  border:1px solid $colorGreenAlphaLight;
+  color:$colorBlue;
+  background:$colorGreenAlpha;
+  position:absolute;
+  bottom:0;
+  
+  font-family:monospace;
+  font-size:1.2rem;
+}
+
+span.wpcf7-not-valid-tip{
+  position:absolute;
+  bottom:-1.5rem;
+  color:$colorYellowAlpha;
+  right:0;
+}
+
+.wpcf7-validation-errors {
+  border:1px solid $colorYellowAlpha;
+  color:$colorYellowAlpha;
+  z-index:10;
+  position:absolute;
+  bottom:0;
+  width:50%;
+  display:none;
+  opacity:0;
+}
+
+
 .contact{
   width:100%;
   padding-top:75px;
-  // max-width:1280px;
   margin:0 auto;
   color:$colorWhite;
-  // border:1px solid red;
-
-// background-image:
+  overflow-x:hidden;
+ 
 
 
 
@@ -16,12 +44,12 @@
   display:flex;
   margin:0 auto;
   flex-wrap:no-wrap;
-  justify-content:space-between;
+  justify-content:center;
 }
 
 .contactBoxGreet,
 .contactBoxForm {
-  width:40%;
+  width:48%;
   position:relative;
  
 }
@@ -32,23 +60,22 @@ h2{
 
   color:$colorGreenAlpha;
   font-weight:900;
-  // text-transform:uppercase;
   font-size:5.5rem;
   margin:0 0;
   position:absolute;
-  top:0;
+  top:2.5rem;
   z-index:1;
+  letter-spacing:-3px;
   }
   p {line-height:1.8;
     font-size:1.2rem;
-    color:$colorGreen;
+    color:$colorWhite;
     font-weight:600;
-    padding:50px 20px;
+    padding:90px 20px;
     position:relative;
     z-index:10;}
   a {color:$colorGreenAlpha;
     transition:color .3s ease;
-    // letter-spacing:1px;
     font-weight:800;
     &:hover{
       color:$colorBlue;
@@ -84,29 +111,47 @@ textarea{
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
   outline: none;
-  // padding: 3px 0px 3px 1rem;
   padding:1rem;
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
   border: 1px solid transparent;
 
   border-bottom:1px solid $colorGreenAlphaLight;
-  // padding:0 1rem;
 }
  
   textarea:focus::-webkit-input-placeholder,
   input[type=text]:focus::-webkit-input-placeholder,
   input[type=email]:focus::-webkit-input-placeholder{
-  transform:scale(.6) translate(-160px,-30px);
+  transform:scale(.6) translate(-190px,-30px);
   color:darken($colorGreenAlpha, 30%);
-
   }
-// input[type=text]:focus, textarea:focus {
-//   box-shadow: 0 0 5px $colorWhite;
-//   padding: 3px 0px 3px 1rem;
-//   margin: 5px 1px 3px 0px;
-//   border: 1px solid $colorWhite;
-// // }
+
+ textarea:focus::-moz-placeholder,
+  input[type=text]:focus::-moz-placeholder,
+  input[type=email]:focus::-moz-placeholder{
+  transform:scale(.6) translate(-190px,-30px);
+  color:darken($colorGreenAlpha, 30%);
+  }
+
+  textarea:focus:-ms-input-placeholder,
+  input[type=text]:focus:-ms-input-placeholder,
+  input[type=email]:focus:-ms-input-placeholder{
+  transform:scale(.6) translate(-190px,-30px);
+  color:darken($colorGreenAlpha, 30%);
+  }
+
+  textarea:-moz-placeholder,
+  input[type=text]:-moz-placeholder,
+  input[type=email]:-moz-placeholder{
+  transform:scale(.6) translate(-190px,-30px);
+  color:darken($colorGreenAlpha, 30%);
+  }
+
+
+
+
+
+
 
 .wpcf7-submit {background:$colorBlue;
               color:$colorWhite;
@@ -176,28 +221,45 @@ transform: translateZ(0)  translate3d(0,0,0) scale(1.0, 1.0);
 ::-moz-placeholder { /* Firefox 19+ */
   color: $colorBlue;
   transition:all .3s ease;
+  backface-visibility: hidden;
+transform: translateZ(0)  translate3d(0,0,0) scale(1.0, 1.0);
 }
 :-ms-input-placeholder { /* IE 10+ */
   color: $colorBlue;
   transition:all .3s ease;
+  backface-visibility: hidden;
+transform: translateZ(0)  translate3d(0,0,0) scale(1.0, 1.0);
 }
 :-moz-placeholder { /* Firefox 18- */
   color: $colorBlue;
   transition:all .3s ease;
+  backface-visibility: hidden;
+transform: translateZ(0)  translate3d(0,0,0) scale(1.0, 1.0);
 }
 
+@media screen and (max-width: 1000px){
+.contact .contactBoxGreet{
 
+  h2{
+  font-size:4rem;
+  
+  }
+  
+}
 
+}
 @media screen and (max-width: 700px){
 .contact {padding-top:0;}
 .contactBoxGreet:before{
   right:-10%;
 }
 .contact .contactBoxGreet{
+padding-top:2rem;
   h2{
   font-size:4rem;
-  padding:0 1rem;
+  padding:.4rem 1rem;
   }
+  p{color:$colorGreen;}
 }
 .contact .wpcf7-form {
             padding:.5rem;
@@ -212,8 +274,43 @@ transform: translateZ(0)  translate3d(0,0,0) scale(1.0, 1.0);
               font-size:1.8rem;
               bottom:39px;
               right:15px;
-
             }
+
+
+ .contact .wpcf7-form textarea:focus::-webkit-input-placeholder,
+ .contact .wpcf7-form input[type=text]:focus::-webkit-input-placeholder,
+ .contact .wpcf7-form input[type=email]:focus::-webkit-input-placeholder{
+  transform:scale(.6) translate(-140px,-30px);
+  }
+
+
+  .contact .wpcf7-form textarea:focus::-moz-placeholder,
+ .contact .wpcf7-form input[type=text]:focus::-moz-placeholder,
+ .contact .wpcf7-form input[type=email]:focus::-moz-placeholder{
+  transform:scale(.6) translate(-140px,-30px);
+  }
+
+  .contact .wpcf7-form textarea:focus:-ms-input-placeholder,
+ .contact .wpcf7-form input[type=text]:focus:-ms-input-placeholder,
+ .contact .wpcf7-form input[type=email]:focus:-ms-input-placeholder{
+  transform:scale(.6) translate(-140px,-30px);
+  }
+
+  .contact .wpcf7-form textarea:focus:-moz-placeholder,
+ .contact .wpcf7-form input[type=text]:focus:-moz-placeholder,
+ .contact .wpcf7-form input[type=email]:focus:-moz-placeholder{
+  transform:scale(.6) translate(-140px,-30px);
+  }
+
+
+
+
+
+
+
+
+
+
 
 }
 

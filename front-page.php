@@ -38,17 +38,42 @@
 
 <section class="work" id="work">
 
+
+<?php
+if( have_rows('work') ):
+    while ( have_rows('work') ) : the_row();
+
+
+$rows = get_field('work' ); // get all the rows
+
+    endwhile;
+else :
+endif;
+?>
+
+
+
+
+
+
+
+
+
+
+
                 <ul id="workThumbs" class="workThumbs workThumbsOffScreen">
-                    <li class="wordBox">
-      <!--  <aside>
-            <section>
-               -->
+
+
+
+
+                    <li class="wordBox" data-hide="<?php echo $rows[0]['show']; ?>">
+      
                        <a class="disabled" href="http://radioactiveblood.com">
 
    
-    <h2>Marvel Comics API</h2>
-    <h3>Fully interactive Web App</h3>
-    <p>Accessing Marvel's API I've developed an app that will create a custom collage of up to 20 different comic book covers based on user input. I then use HTML Canvas to convert the image into a jpeg which the user can download. Fun to design and code.</p>
+    <h2> <?php echo $rows[0]['title']; ?> </h2>
+    <h3> <?php echo $rows[0]['subtitle']; ?>  </h3>
+    <p><?php echo $rows[0]['description']; ?></p>
     <aside class="iconBox">
     <i class="devicon-javascript-plain"></i>
     <i class="devicon-jquery-plain-wordmark"></i>
@@ -62,9 +87,14 @@
                         </a>
 
                     </li>
-                    <li>
-                        <a class="imageLink" href="http://radioactiveblood.com">
-                            <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/marvel.jpg" />
+                    <li data-hide="<?php echo $rows[0]['show']; ?>">
+                        <a class="imageLink" href="<?php echo $rows[0]['link']; ?>">
+
+<img src="<?php echo $rows[0]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+
+
+                           <!--  <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/marvel.jpg" /> -->
                             <div class="clyde"><button type="button" class="btn btn-svg">
   <svg class="btn_svg" version="1.1" viewBox="0 0 30 20" preserveAspectRatio="none">
     <rect class="btn_svg_shape" width="30" height="20"/>
@@ -78,9 +108,13 @@
 
 
 
-                  <li>
-                        <a  class="imageLink" href="http://clyde.codes/preach">
-                            <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/preach.jpg" />
+                  <li data-hide="<?php echo $rows[1]['show']; ?>">
+                        <a  class="imageLink" href="<?php echo $rows[1]['link']; ?>">
+
+<img src="<?php echo $rows[1]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+
+                            <!-- <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/preach.jpg" /> -->
                             <div class="clyde"><button type="button" class="btn btn-svg">
   <svg class="btn_svg" version="1.1" viewBox="0 0 30 20" preserveAspectRatio="none">
     <rect class="btn_svg_shape" width="30" height="20"/>
@@ -89,11 +123,11 @@
 </button></div>
                         </a>
                     </li>
-                    <li class="wordBox">
+                    <li class="wordBox" data-hide="<?php echo $rows[1]['show']; ?>">
                         <a  class="disabled" href="http://clyde.codes/preach">
-    <h2>Preach</h2>
-    <h3>Multi-Page WordPress Theme</h3>
-    <p>This was a collaborative project with myself and Kelvin Li. Tools used were Git and GitHub. All custom WordPress fields. Easily changed to suit many purposes.</p>
+    <h2> <?php echo $rows[1]['title']; ?> </h2>
+    <h3> <?php echo $rows[1]['subtitle']; ?> </h3>
+    <p><?php echo $rows[1]['description']; ?></p>
     <aside class="iconBox">
     <i class="devicon-php-plain"></i>
     <i class="devicon-wordpress-plain-wordmark"></i>
@@ -103,15 +137,15 @@
       </aside>
                             <div class="clyde"><span></span></div>
                         </a>
-                    </li>
+                    </li data-hide="<?php echo $rows[2]['show']; ?>">
                     
 
 
- <li class="wordBox">
+ <li class="wordBox" data-hide="<?php echo $rows[2]['show']; ?>">
                         <a  class="disabled" href="http://clyde.codes/krafty">
-     <h2>Krafty Labs</h2>
-    <h3>Responsive Single Page </h3>
-    <p>I took some time making making the user interactions fun. I challenged myself to make the mobile experience better than the desktop. Gulp and Sass allowed this to be mostly done in less than 2 days.</p>
+     <h2> <?php echo $rows[2]['title']; ?> </h2>
+    <h3> <?php echo $rows[2]['subtitle']; ?> </h3>
+    <p><?php echo $rows[2]['description']; ?></p>
     <aside class="iconBox">
     <i class="devicon-html5-plain-wordmark"></i>
     <i class="devicon-javascript-plain"></i>
@@ -122,9 +156,13 @@
                             <div class="clyde"><span></span></div>
                         </a>
                     </li>
-                    <li>
-                        <a  class="imageLink" href="http://clyde.codes/krafty">
-                            <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/krafty.jpg" />
+                    <li data-hide="<?php echo $rows[2]['show']; ?>">
+                        <a  class="imageLink" href="<?php echo $rows[2]['link']; ?>">
+
+<img src="<?php echo $rows[2]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+
+                           <!--  <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/krafty.jpg" /> -->
                             <div class="clyde">
 
                             
@@ -139,9 +177,13 @@
 
 
 
-<li>
-                        <a class="imageLink" href="http://clyde.codes/pitch">
-                            <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/pitch.jpg" />
+<li data-hide="<?php echo $rows[3]['show']; ?>">
+                        <a class="imageLink" href="<?php echo $rows[3]['link']; ?>">
+                           
+<img src="<?php echo $rows[3]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+
+                            <!-- <img src="/portfolio/wp-content/themes/wordpress_starter_theme/images/pitch.jpg" /> -->
                             <div class="clyde">
 
 
@@ -157,11 +199,11 @@
                             </div>
                         </a>
                     </li>
-                    <li class="wordBox">
+                    <li class="wordBox" data-hide="<?php echo $rows[3]['show']; ?>">
                         <a  class="disabled" href="http://clyde.codes/pitch">
-     <h2>Pitch</h2>
-    <h3>Responsive Multi Page </h3>
-    <p>Three pages, all responsive, contact form, map, sortable portfolio items and lots of CSS tweens. Some were explicit in the PSD while other interactions I extrapolated based on patterns I detected in the design.</p>
+     <h2> <?php echo $rows[3]['title']; ?> </h2>
+    <h3><?php echo $rows[3]['subtitle']; ?></h3>
+    <p><?php echo $rows[3]['description']; ?></p>
     <aside class="iconBox">
     <i class="devicon-html5-plain-wordmark"></i>
     <i class="devicon-css3-plain-wordmark"></i>
@@ -172,7 +214,45 @@
                         </a>
                     </li>
   
+
+
+<li class="wordBox" data-hide="<?php echo $rows[4]['show']; ?>">
+                        <a  class="disabled" href="http://clyde.codes/krafty">
+     <h2> <?php echo $rows[4]['title']; ?> </h2>
+    <h3> <?php echo $rows[4]['subtitle']; ?> </h3>
+    <p><?php echo $rows[4]['description']; ?></p>
+    <aside class="iconBox">
+    <i class="devicon-html5-plain-wordmark"></i>
+    <i class="devicon-javascript-plain"></i>
+    <i class="devicon-sass-original"></i>
+    <i class="devicon-gulp-plain"></i>
+    <i class="fa fa-mobile icon"></i>
+    </aside>
+                            <div class="clyde"><span></span></div>
+                        </a>
+                    </li>
+                    <li data-hide="<?php echo $rows[4]['show']; ?>">
+                        <a  class="imageLink" href="<?php echo $rows[4]['link']; ?>">
+
+<img src="<?php echo $rows[4]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <div class="clyde">
+                            <button type="button" class="btn btn-svg">
+  <svg class="btn_svg" version="1.1" viewBox="0 0 30 20" preserveAspectRatio="none">
+    <rect class="btn_svg_shape" width="30" height="20"/>
+  </svg>
+  <span>VIEW LIVE</span>
+</button></div>
+                        </a>
+                    </li>
+
+
+
+
+
 </ul>
+
+
+
 </section>
  
  <section class="skills" id="skills">
@@ -242,16 +322,13 @@
   
 
 
-
 <div class="contactBox clearfix">
 
 <div class="contactBoxGreet">
   <h2>Contact me</h2>
-  <p>This is the part where I ask you to get in touch. Want to chat about work you need done or have some feedback on the site? Want me to whip up a codepen for anything you saw here? Drop me a line, I'd love to here from you.  Use the contact form or email me directly at 
 
+  <p><?php the_field('contact_form_paragraph' ); ?>
 <a href="mailto:hello@cylde.codes?Subject=Hello%20Clyde" target="_top">hello[@]clyde.codes</a>
-
-
   </p>
 </div>
 
@@ -273,5 +350,29 @@
 
   <!-- </div> /.container -->
 </div> <!-- /.main -->
+
+
+
+<div id="typed-strings1">
+    <p><?php the_field('typed1'); ?></p>
+</div>
+<div id="typed-strings2">
+    <p><?php the_field('typed2'); ?></p>
+</div>
+<div id="typed-strings3">
+    <p><?php the_field('typed3'); ?></p>
+</div>
+<div id="typed-strings4">
+    <p><?php the_field('typed4'); ?></p>
+</div>
+<div id="typed-strings5">
+    <p><?php the_field('typed5'); ?></p>
+</div>
+<div id="typed-strings6">
+    <p><?php the_field('typed6'); ?></p>
+</div>
+
+
+
 
 <?php get_footer(); ?>

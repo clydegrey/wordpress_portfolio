@@ -17,7 +17,7 @@
 <!-- <div class="se-pre-con">tttttt</div> -->
 
 
-<div id="load" class="load">
+<!-- <div id="load" class="load">
   <div>G</div>
   <div>N</div>
   <div>I</div>
@@ -25,7 +25,7 @@
   <div>A</div>
   <div>O</div>
   <div>L</div>
-</div>
+</div> -->
 
 
 <style>

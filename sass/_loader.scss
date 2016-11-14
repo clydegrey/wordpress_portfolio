@@ -19,6 +19,7 @@
   height:36px;
   opacity:0;
   font-family: $logo;
+  font-family:monospace;
   animation:move 2s linear infinite;
   -o-animation:move 2s linear infinite;
   -moz-animation:move 2s linear infinite;
@@ -28,6 +29,7 @@
   -moz-transform:rotate(180deg);
   -webkit-transform:rotate(180deg);
   color:$colorGreen;
+  font-size:4rem;
 }
 
 #load div:nth-child(2) {

@@ -11,9 +11,9 @@ body {background:$colorBlack;
 		position:relative;
 		width:100%;
 		margin:0 auto;
+		margin-top:20px;
 		overflow-X:hidden;
 		background:$colorBlack;
-
 		.binary__back {
 			position:absolute;
 			min-width:1280px;
@@ -21,7 +21,6 @@ body {background:$colorBlack;
 			top:0;
 			left:0;
 			z-index:5;
-			
 		}
 		.binary__image {
 			background:$colorBlack;
@@ -38,17 +37,9 @@ body {background:$colorBlack;
 		}
 		}
 
-// .workThumbs li img {transition:all .5s .5s ease;
-// 					backface-visibility: hidden;}
-// .workThumbs li:hover img {transform:scale(1.01) translateZ(0);
-// 						  }
-
 .workThumbs li {transition:all .8s ease, opacity 1.6s ease;
 				transform:translateX(0);
 				opacity:1;}
-// .workThumbs li:nth-of-type(3),
-// .work .workThumbs li:nth-of-type(4) {transition-delay:.2s;}
-
 .workThumbsOffScreen{
  li:nth-of-type(odd){
 	transform:translateX(-100%);
@@ -59,8 +50,6 @@ li:nth-of-type(even){
 	opacity:0;
 }
 }
-
-
 
 .binary__typed {font-family:monospace;
 				font-size:10.4px;
@@ -95,7 +84,6 @@ li:nth-of-type(even){
 						}
 					}
 }
-
 
 .all-animate .binary__typedContainer  {
 		display:block;
@@ -184,7 +172,7 @@ keyframes scan {
 
 .arrow:after {display:inline-block;
 		display:inline-block;
-		animation: arrow .8s forwards, blink .7s 8;
+		animation: arrow .8s 1.5s forwards, blink .7s 8;
 	}
 
 
@@ -208,7 +196,7 @@ keyframes scan {
 .work {
 	max-width:1280px;
 	margin:0 auto;
-	margin-top:120px;
+	padding-top:60px;
       .workThumbs {
     list-style: none;
     width: 100%;
@@ -224,21 +212,15 @@ keyframes scan {
 		content:"Recent work";
 		position:absolute;
 		color:$colorGreenAlpha;
-		
 		display:inline-block;
-		width:100%;
-                   
-                    // left:-10px;
-                    top:-8rem;
-                    // transform:translate(-50%,0);
-                    
-                    font-family:$font-raleway;
-
-                    font-weight:900;
-                    letter-spacing:-3px;
-                   
-                    font-size:5rem;
-                    z-index:-1;
+		// width:100%;
+        top:-5.9rem;  
+        font-family:$font-raleway;
+        font-weight:900;
+        letter-spacing:-3px;
+        font-size:5rem;
+        z-index:100;
+        background:$colorBlack;
 
 	}
    
@@ -296,9 +278,6 @@ keyframes scan {
 }
 
 		.wordBox       {
-
-
-
 						background-color:$colorBlack;
 						// background:url('/portfolio/wp-content/themes/wordpress_starter_theme/images/darkgeo.png');
 						color:$colorWhite;
@@ -350,8 +329,6 @@ keyframes scan {
 					}
 
 }
-
-
 
 @media screen and (max-width: 600px) {
   

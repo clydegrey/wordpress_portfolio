@@ -2,7 +2,17 @@
 var portfolio = {};
 
 
+$(".workThumbs li").hide();
+$(".workThumbs li").filter(function () {
+  return ($(this).attr('data-hide')==='1')
+}).show();
+
+
 portfolio.init = function(){
+
+
+
+  
 
   $('.btn-svg').each(function(){
     var 
@@ -35,7 +45,8 @@ setTimeout(function(){
 		$('.binary').addClass('all-animate');
 
 	 	$('.binary__typed-1').typed({
-	 		strings: ["hello there, my name is <span class='binaryName'>clyde grey</span>"],
+	 		
+             stringsElement: $('#typed-strings1'),
             typeSpeed: -12,
             startDelay: 0,
             showCursor: false,            
@@ -49,7 +60,8 @@ setTimeout(function(){
 	 	});
 
 	 	$('.binary__typed-2').typed({
-	 		strings: ["i am a front-end web developer,"],
+	 		
+             stringsElement: $('#typed-strings2'),
             typeSpeed: -12,
             startDelay: 400,
             showCursor: false,
@@ -63,7 +75,8 @@ setTimeout(function(){
 	 	});
 
 	 	$('.binary__typed-3').typed({
-	 		strings: ["living and working in toronto, canada"],
+	 		
+             stringsElement: $('#typed-strings3'),
             typeSpeed: -12,
             startDelay: 1000,
             showCursor: false,
@@ -77,7 +90,8 @@ setTimeout(function(){
 	 	});
 
 	 	$('.binary__typed-4').typed({
-	 		strings: ["i love making cool interactive sites"],
+	 		
+             stringsElement: $('#typed-strings4'),
             typeSpeed: -12,
             startDelay: 1400,
             showCursor: false,
@@ -91,7 +105,8 @@ setTimeout(function(){
 	 	});
 
 	 	$('.binary__typed-5').typed({
-	 		strings: ["and writing dry semantic code"],
+	 	
+             stringsElement: $('#typed-strings5'),
             typeSpeed: -12,
             startDelay: 2000,
             showCursor: false,
@@ -106,10 +121,12 @@ setTimeout(function(){
 
 
 	 	$('.checkWork').typed({
-	 		strings: ["check out my work:"],
+	 
+             stringsElement: $('#typed-strings6'),
             typeSpeed: -12,
-            startDelay: 2400,
+            startDelay: 3000,
             showCursor: false,
+            backDelay:4000,
             preStringTyped: function() {
             	$('.checkWork').removeClass('hide');
             },
@@ -166,10 +183,10 @@ $('.menu-icon').on('click', function(e) {
 
 $(function(){
 
-  
+ 
 
 $(window).load(function() {
-    $(".load").fadeOut(1);
+    $(".load").hide();
     portfolio.init();
     
   });
