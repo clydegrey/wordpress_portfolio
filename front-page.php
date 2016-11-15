@@ -2,7 +2,7 @@
 
 <div class="main">
 
-<section class="binary">
+<!-- <section class="binary">
   
   <div class="binary__typedContainer">
 
@@ -22,22 +22,38 @@
     <a class="checkWork hide" href="#work"></a>
     </div>
 
+</div> -->
+<section class="hero">
+  
+
+<div class="hero__text">
+  
+<!-- <h2>Clyde Grey</h2>
+<h3>front-end developer</h3> -->
+
 </div>
 
 
-<img class="binary__back" src="/portfolio/wp-content/themes/wordpress_starter_theme/images/binary2.png" alt="">
 
-<div class="binary__image">
-<img class="binary__imagex" src="/portfolio/wp-content/themes/wordpress_starter_theme/images/binary2.png" alt="">
+<?php 
 
+$hero = get_field('hero_image');
+
+if( !empty($hero) ): ?>
+
+<!-- <img class="binary__back" src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" /> -->
+<div class="hero__image">
+<img class="binary__imagex" src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" />
 </div>
+
+<?php endif; ?>
 
 
 </section>
 
-
+<div class="work__wrapper">
 <section class="work" id="work">
-
+<h2 class="work__title">Recent Work</h2>
 
 <?php
 if( have_rows('work') ):
@@ -88,7 +104,7 @@ endif;
 
                     </li>
                     <li data-hide="<?php echo $rows[0]['show']; ?>">
-                        <a class="imageLink" href="<?php echo $rows[0]['link']; ?>">
+                        <a class="imageLink" href="<?php echo $rows[0]['link']; ?>" target="_blank">
 
 <img src="<?php echo $rows[0]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
@@ -109,7 +125,7 @@ endif;
 
 
                   <li data-hide="<?php echo $rows[1]['show']; ?>">
-                        <a  class="imageLink" href="<?php echo $rows[1]['link']; ?>">
+                        <a  class="imageLink" href="<?php echo $rows[1]['link']; ?>" target="_blank">
 
 <img src="<?php echo $rows[1]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
@@ -157,7 +173,7 @@ endif;
                         </a>
                     </li>
                     <li data-hide="<?php echo $rows[2]['show']; ?>">
-                        <a  class="imageLink" href="<?php echo $rows[2]['link']; ?>">
+                        <a  class="imageLink" href="<?php echo $rows[2]['link']; ?>" target="_blank">
 
 <img src="<?php echo $rows[2]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
@@ -178,7 +194,7 @@ endif;
 
 
 <li data-hide="<?php echo $rows[3]['show']; ?>">
-                        <a class="imageLink" href="<?php echo $rows[3]['link']; ?>">
+                        <a class="imageLink" href="<?php echo $rows[3]['link']; ?>" target="_blank">
                            
 <img src="<?php echo $rows[3]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
@@ -199,7 +215,7 @@ endif;
                             </div>
                         </a>
                     </li>
-                    <li class="wordBox" data-hide="<?php echo $rows[3]['show']; ?>">
+                    <li class="wordBox" data-hide="<?php echo $rows[3]['show']; ?>" target="_blank">
                         <a  class="disabled" href="http://clyde.codes/pitch">
      <h2> <?php echo $rows[3]['title']; ?> </h2>
     <h3><?php echo $rows[3]['subtitle']; ?></h3>
@@ -232,7 +248,7 @@ endif;
                         </a>
                     </li>
                     <li data-hide="<?php echo $rows[4]['show']; ?>">
-                        <a  class="imageLink" href="<?php echo $rows[4]['link']; ?>">
+                        <a  class="imageLink" href="<?php echo $rows[4]['link']; ?>" target="_blank">
 
 <img src="<?php echo $rows[4]['project_image']['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                             <div class="clyde">
@@ -255,6 +271,9 @@ endif;
 
 </section>
  
+
+</div>
+
  <section class="skills" id="skills">
    <div class="skills__wrapper">
  
@@ -282,7 +301,7 @@ endif;
 </ul>
 </div>  
 
-<h2><i class="fa fa-plus" aria-hidden="true"></i></h2>
+<!-- <h2><i class="fa fa-plus" aria-hidden="true"></i></h2> -->
 
 <div class="skills__flexItem">
 
@@ -353,7 +372,7 @@ endif;
 
 
 
-<div id="typed-strings1">
+<!-- <div id="typed-strings1">
     <p><?php the_field('typed1'); ?></p>
 </div>
 <div id="typed-strings2">
@@ -370,7 +389,7 @@ endif;
 </div>
 <div id="typed-strings6">
     <p><?php the_field('typed6'); ?></p>
-</div>
+</div> -->
 
 
 

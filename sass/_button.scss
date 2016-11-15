@@ -10,7 +10,7 @@ footer {
   background: none;
   padding: 1em;
   background-color: transparent;
-  background-color:rgba(255,255,255,.7);
+  background-color:$colorBlackAlphaDark;
   -webkit-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
   font-size: 1.5rem;
@@ -24,10 +24,12 @@ footer {
   -webkit-transition-delay: 0;
           transition-delay: 0;
   border: none;
+
   top:50%;
   transform:translate(0%, -50%);
   span{
-  	font-family:$font-contrail;
+  	// font-family:$font-contrail;
+      font-weight:600; 
   		}
 }
 .btn.btn-small {
@@ -66,16 +68,17 @@ footer {
   height: 100%;
 }
 .btn .btn_svg_shape {
-  stroke: $colorButton;
+  stroke: $colorButtonBackground;
   stroke-width: 2px;
   stroke-linecap: round;
   fill: transparent;
+
 }
 .btn:hover {
   -webkit-transition-delay: 250ms;
           transition-delay: 250ms;
   background-color: $colorButtonBackground;
-  color: white;
+  color: $colorMidnight;
 }
 .btn:hover:before {
   opacity: 0;

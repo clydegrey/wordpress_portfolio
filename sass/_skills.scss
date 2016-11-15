@@ -3,7 +3,8 @@
 .skills {
     width:100%;
     // margin-bottom:-70px;
-   
+    
+    i.fa{color:$colorBlackAlphaMid;}
    
     background-color:$colorWhite;
     .skills__wrapper{
@@ -27,11 +28,11 @@
                 display:flex;
                 font-size:1.3rem;
                 flex-wrap:no-wrap;
-                justify-content:space-around;
+                justify-content:space-between;
 
                 .skills__flexItem
                 {
-                  width:50%;
+                  width:49%;
                   position:relative;
                   z-index:10;
       
@@ -39,13 +40,13 @@
                 position:relative;
                   &:before{
                     content:"Tools";
-                    color:darken($colorGreen,13%);
+                    color:$colorBlue;
                     position:absolute;
                     left:50%;
-                    bottom:-8.5rem;
+                    bottom:-9.1rem;
                     transform:translate(-50%,0);
+                    text-transform:uppercase;
                     
-                    font-family:$font-raleway;
                     font-weight:900;
                     letter-spacing:-6px;
                     font-size:9.5rem;
@@ -58,13 +59,13 @@
                    &:before{
                     content:"Skills";
                     color:$colorGreen;
+                    color:$colorMidnight;
                     position:absolute;
                     left:50%;
-                    top:-8.5rem;
+                    top:-9.6rem;
                     transform:translate(-50%,0);
+                    text-transform:uppercase;
                     
-                    font-family:$font-raleway;
-
                     font-weight:900;
                     letter-spacing:-6px;
                    
@@ -83,21 +84,22 @@
                     list-style-type:none;
                     display:flex;
                     flex-wrap:wrap;
-                    .tools__listItem--padding {padding:1.1rem 3rem;}
+                    .tools__listItem--padding {padding:1.1rem 2rem;}
                           li{
                             flex:1 1 auto;
                             padding:1.1rem 1.3rem;
-                            background-color:darken($colorGreen,13%);
+                            background-color:$colorMidnight;
+                            // border-bottom:2px solid $colorBlue;
                             // color:$colorGreen;
                            color:$colorWhite;
                            // border:1px solid $colorWhite;
-                            margin:0 1px;
+                            margin:3px;
                             
 
                             
-                          .bullet{ 
-                                color:$colorBlue;
-                                  }
+                          // .bullet{ 
+                          //       color:$colorWhite;
+                          //         }
                           }
                      }
                 
@@ -108,9 +110,11 @@
               .skills__flexItem:nth-of-type(1){
                 // background:transparent;
                 transition:background 1.3s 1.3s ease;
+
                li{ transform: translateX(-100%) skewX(30deg) scale(.3); 
                 opacity:0;
-                background-color:$colorGreen;
+               
+                // background-color:$colorGreen;
                 color:$colorWhite;
                 
               }
@@ -122,6 +126,7 @@
                 transition:background 1.3s 1.3s ease;
                li{ transform: translateX(100%) skewX(-30deg) scale(.3);
                 opacity:0; 
+                      background:$colorBlue;
                  
               }
               }
@@ -139,7 +144,8 @@
 // .skills__wrapper .skills__box {z-index:1000; position:relative;}
 
  .skills__wrapper .skills__box  .skills__flexItem:nth-of-type(1)
- {background:lighten($colorGreen,20%);
+ {
+  // background:lighten($colorGreen,20%);
   // z-index:100;
  
 
@@ -150,7 +156,7 @@
 }
 
 .skills__flexItem:nth-of-type(2){ 
-  background:lighten($colorGreen,20%);
+  // background:lighten($colorGreen,20%);
 
 
   li {
@@ -224,12 +230,12 @@
      .skills__list:before{
                     left:100%;
                     // bottom:0;
-                    top:-7.5rem;
+                    top:-8.4rem;
                     font-size:8rem;
                   }
     .tools__list:before{
                     left:0;
-                    bottom:-7.5rem;
+                    bottom:-7.95rem;
                     font-size:8rem;
                   }
 

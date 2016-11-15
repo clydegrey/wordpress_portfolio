@@ -53,7 +53,11 @@ function hackeryou_styles(){
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
-	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Contrail+One|Raleway:400,600,700,900');
+	// wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Contrail+One|Raleway:400,600,700,900|Ubuntu+Mono');
+
+	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900');
+
+	
 
 	wp_enqueue_style('devicon', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css');
 

@@ -2,7 +2,9 @@
 .main {width:100vw;
 	   overflow-x:hidden;}
 
-header{background:$colorBlackAlphaDark;
+header{
+
+	// background:$colorBlackAlphaDark;
 		max-width:1280px;
 			width:1280px;
 			margin:0 auto;
@@ -13,7 +15,7 @@ header{background:$colorBlackAlphaDark;
 			max-width:1280px;
 			width:100%;
 			
-			padding:15px 0;
+			padding:5px 0;
 			margin:0 auto;
 			display:flex;
 			flex-wrap:no-wrap;
@@ -21,55 +23,68 @@ header{background:$colorBlackAlphaDark;
 			position:fixed;
 			z-index:20;
 			width:100%;
-			background:$colorBlackAlphaDark;
+			background:$colorMidnightAlpha;
 		}
 
  h1 {
-	
+	color:$colorWhite;
 	margin:0;
+	
 	padding:0 1.5rem;
+	font-weight:900;
+	font-size:2.4rem;
+	padding:0 1.8rem;
+	// font-family: 'Source Sans Pro', sans-serif;
+	// font-family:$fontClare;
 	
 
  a {
-	font-family: $logo;
+	font-family:$fontClare;
 	color:$colorWhite;
 	margin:0;
 	padding:0;
+	font-weight:900;
+
+	span {color:$colorBlue;
+		  padding:0 6px;}
 	}
 }
 
 ul.menu {
 	
-	margin: 0;
+	margin: auto 0;
 	padding:0;
 	font-size:0;
+	height:100%;
+	// background-color:$colorBlackAlphaDark;
 	li {
-		display: inline;
-		margin-right: 10px;
-		margin-left: 10px;
+		display: inline-block;
+		margin:0;
+		padding:0;
+		font-size:0;
+		// border:1px solid $colorBlue;
+		
 		a {
-			font-size:1.5rem;
-			font-family:monospace;
+
+
+			margin-right: 10px;
+		margin-left: 10px;
+			font-size:1rem;
+			letter-spacing:2px;
+			// font-family:$fontMain;
+			font-family:$fontMain;
 			text-transform:uppercase;
 			color: $colorWhite;
-			
-		&:after{
-			content:"_";
-			opacity:0;
-		}
-		&:hover{
-			animation: glowing 1.5s ease-in-out infinite alternate;
-			&:after{
-				animation:blink .7s  infinite;
-				
-				opacity:1;
-			}
+			 // @include transition-opt;
+			   @include transition-opt($hover-color:$colorBlue,$transition-speed:.3s, $transition-easing: ease-in-out,
+			   	 $transition-color:$colorBlue);
+               @include move-vertical;
 		}
 		}
 	}
 }
 
-}
+
 
 .menu-icon{
 	display:none;
@@ -85,30 +100,32 @@ header  {position:relative;}
 header ul.menu{
 	
 		background:transparent;
-		transform:translateY(-300px);
+		transform:translateY(-350px);
 		
 		position:absolute;
 		right:4rem;
-		
+		height:auto;
+		border:3px solid $colorMidnightAlpha;
 		padding:0;
 		
 				flex-wrap:wrap;
 				
 				text-align:right;
 				width:300px;
-				
+				// border:1px solid $colorBlue;
 				justify-content:space-between;
 				li{width:100%;
-					background:darken($colorGreen,13%);
+					background:$colorMidnightAlpha;
 					margin:0;
-					padding-bottom:1rem;
-					padding-right:1.5rem;
+					// border:2px solid $colorBlue;
+					padding:.5rem 1.5rem;
+					color:$colorWhite;
+					text-align:center;
 					
-					font-size:2.5rem;
-					&:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3){
-					border-bottom: 1px solid darken($colorGreen,10%);
 					
-						}
+					a{font-size:3rem;
+
+					}
 					
 					}
 		}

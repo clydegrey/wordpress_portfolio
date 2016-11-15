@@ -75,6 +75,10 @@ a:active {
  *    `:before` to contain the top-margins of child elements.
  */
 
+a:focus,
+a:active {outline: red;
+        border:1px solid green;}
+
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -119,12 +123,12 @@ $colorBlueAlpha:rgba(11, 79, 108,.8);
 $colorBlue: #1D84B5;
 $colorBlue:#36aa9d;
 $colorBlue:#1AC8ED;
-// $colorButton: $colorBlueAlpha;
-// $colorButtonBackground:$colorBlueAlpha;
-$colorButton: $colorBlue;
-$colorButtonBackground:$colorBlue;
 
 
+
+
+$colorBrown: #8d4849;
+$font-typed:'Ubuntu Mono', monospace;
 $font-contrail:'Contrail One', cursive;
 $font-lato:'Lato', sans-serif;
 $font-oswald:'oswald', san-serif;
@@ -134,6 +138,52 @@ $logo:$font-contrail;
 $logo:$font-contrail;
 $font-links:$font-contrail;
 $font-anton:anton;
+
+
+
+
+// variables i am using
+
+$colorWhiteOff: #f5f6f7;
+$colorWhite:#fff;
+$colorWhiteAlpha:rgba(255,255,255,.8);
+$colorBlackTrue:#000;
+$colorBlack:#17252d;
+$colorBlackAlphaMid: rgba(0,0,0,.5);
+$colorBlackAlphaLight: rgba(0,0,0,.3);
+$colorBlackAlphaDark: rgba(0,0,0,.8);
+$colorBlackAlphaDarkest: rgba(0,0,0,.9);
+$colorGreen:#66a35c;
+$colorBlue:#00729c;
+$colorBlueAlphaLight:rgba(0,114,156,.4);
+$colorBlueAlpha:rgba(0,114,156,.8);
+$colorButton: $colorGreen;
+$colorButtonBackground:$colorGreen;
+
+
+
+$colorMidnight:#002842;
+$colorMidnightAlpha:rgba(0,40,66,.8);
+
+$colorButton: $colorWhite;
+$colorButtonBackground:$colorWhiteAlpha;
+
+$fontSource:'Source Sans Pro', sans-serif;
+$fontMain: $fontSource;
+
+$fontClare: 'clarendon';
+// $fontMain:$fontClare;
+
+@font-face {
+  font-family: 'clarendon';
+  src: url('fonts/clarendon.eot');
+  src: local('☺'), url('http://localhost:3000/portfolio/fonts/clarendon.woff') format('woff'), url('http://localhost:3000/portfolio/fonts/clarendon.ttf') format('truetype'), url('http://localhost:3000/portfolio/fonts/clarendon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 
 @keyframes glowing {

@@ -133,7 +133,7 @@ setTimeout(function(){
           
 	 	});
 	 	setTimeout(function(){ 
-	 		$('.binaryName').addClass('nameColor');
+	 		$('.binary__typed').addClass('white');
 	 		$('.checkWork').addClass('arrow');
 	 	}, 4000);
 }, 700);
@@ -146,7 +146,7 @@ $('a').on('click', function(event) {
       var hash = this.hash;
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 400, function(){
+      }, 480, function(){
         window.location.hash = hash;
       });
     } 
@@ -161,16 +161,28 @@ $('.menu-icon').on('click', function(e) {
     var waypoint = new Waypoint({
         element: document.getElementById('skills'),
         handler: function() {
-            $('#skills').addClass('initiateAnimation');
+
+           
+            $('#skills').addClass('initiateAnimation');  
+           
         },
         offset: 350
     });
 
+
+
      var waypointWork = new Waypoint({
         element: document.getElementById('workThumbs'),
         handler: function() {
+             setTimeout(function(){
+
             $('.workThumbs').removeClass('workThumbsOffScreen');
-            console.log('entered');
+            $('.work').addClass('fadeIn');
+            // $('.work').fadeIn(200);
+            console.log('entered it');
+              }, 200);
+
+
         },
         offset:'60%'
     });
