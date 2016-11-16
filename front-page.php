@@ -2,34 +2,17 @@
 
 <div class="main">
 
-<!-- <section class="binary">
+<section class="hero parallax parallax-window">
   
-  <div class="binary__typedContainer">
 
-  <span class="binary__typed binary__typed-1 hide"></span>
-  <br>
 
-  <span class="binary__typed binary__typed-2 hide"></span>
-   <br>
-  <span class="binary__typed binary__typed-3 hide"></span>
-   <br>
+<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="/path/to/image.jpg"></div> -->
 
-  <span class="binary__typed binary__typed-4 hide"></span>
-   <br>
-   <span class="binary__typed binary__typed-5 hide"></span>
-
-    <div>
-    <a class="checkWork hide" href="#work"></a>
-    </div>
-
-</div> -->
-<section class="hero">
-  
 
 <div class="hero__text">
   
-<!-- <h2>Clyde Grey</h2>
-<h3>front-end developer</h3> -->
+
+
 
 </div>
 
@@ -42,7 +25,7 @@ $hero = get_field('hero_image');
 if( !empty($hero) ): ?>
 
 <!-- <img class="binary__back" src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" /> -->
-<div class="hero__image">
+<div class="hero__image" id="home">
 <img class="binary__imagex" src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" />
 </div>
 
@@ -344,10 +327,12 @@ endif;
 <div class="contactBox clearfix">
 
 <div class="contactBoxGreet">
-  <h2>Contact me</h2>
+  <h2>About me</h2>
 
   <p><?php the_field('contact_form_paragraph' ); ?>
-<a href="mailto:hello@cylde.codes?Subject=Hello%20Clyde" target="_top">hello[@]clyde.codes</a>
+<a href="https://github.com/clydegrey" target="_blank">GitHub</a>or email me directly at
+<a href="mailto:hello@cylde.codes?Subject=Hello%20Clyde" target="_top">hello[at]clyde.codes</a>  
+
   </p>
 </div>
 
@@ -372,24 +357,6 @@ endif;
 
 
 
-<!-- <div id="typed-strings1">
-    <p><?php the_field('typed1'); ?></p>
-</div>
-<div id="typed-strings2">
-    <p><?php the_field('typed2'); ?></p>
-</div>
-<div id="typed-strings3">
-    <p><?php the_field('typed3'); ?></p>
-</div>
-<div id="typed-strings4">
-    <p><?php the_field('typed4'); ?></p>
-</div>
-<div id="typed-strings5">
-    <p><?php the_field('typed5'); ?></p>
-</div>
-<div id="typed-strings6">
-    <p><?php the_field('typed6'); ?></p>
-</div> -->
 
 
 

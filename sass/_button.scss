@@ -1,6 +1,4 @@
-footer {
-	clear: both;
-}
+
 
 
 
@@ -28,7 +26,7 @@ footer {
   top:50%;
   transform:translate(0%, -50%);
   span{
-  	// font-family:$font-contrail;
+  	
       font-weight:600; 
   		}
 }
@@ -120,3 +118,56 @@ footer {
   }
 }
 
+
+@media screen and (max-width: 600px)
+{
+
+
+
+// .btn:before {
+//   opacity: 0;
+// }
+// .btn .btn_svg_shape {
+//   -webkit-transition-property: stroke-dasharray, stroke-dashoffset;
+//   transition-property: stroke-dasharray, stroke-dashoffset;
+//   -webkit-transition-duration: 500ms;
+//           transition-duration: 500ms;
+//   -webkit-transition-timing-function: ease-in-out;
+//           transition-timing-function: ease-in-out;
+//   -webkit-transition-delay: 0;
+//           transition-delay: 0;
+//   stroke-dashoffset: 0 !important;
+//   -webkit-animation: 500ms pencil ease-in forwards;
+//           animation: 500ms pencil ease-in forwards;
+// }
+// /* Stroke animation. Use ems to scale :) */
+// @-webkit-keyframes pencil {
+//   0% {
+//     stroke-width: 0.5em;
+//   }
+//   75% {
+//     stroke-width: 0.25em;
+//   }
+//   100% {
+//     stroke-width: 0.1em;
+//   }
+// }
+// @keyframes pencil {
+//   0% {
+//     stroke-width: 0.5em;
+//   }
+//   75% {
+//     stroke-width: 0.25em;
+//   }
+//   100% {
+//     stroke-width: 0.1em;
+//   }
+// }
+
+.btn{
+  background:$colorWhiteAlpha;
+  color:$colorBlackTrue;
+}
+
+
+}

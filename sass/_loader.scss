@@ -18,7 +18,7 @@
   width:20px;
   height:36px;
   opacity:0;
-  font-family: $logo;
+  // font-family: $logo;
   font-family:monospace;
   animation:move 2s linear infinite;
   -o-animation:move 2s linear infinite;
@@ -28,7 +28,7 @@
   -o-transform:rotate(180deg);
   -moz-transform:rotate(180deg);
   -webkit-transform:rotate(180deg);
-  color:$colorGreen;
+  // color:$colorGreen;
   font-size:4rem;
 }
 

@@ -92,6 +92,15 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
+
+wp_enqueue_script(
+    'jarallax', //handle
+    get_template_directory_uri() . '/js/data-parallax.min.js', //source
+    array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
    wp_enqueue_script(
     'typed', //handle
     get_template_directory_uri() . '/js/typed.js', //source
@@ -115,6 +124,8 @@ function hackeryou_scripts() {
     null, // version number
     true //load in footer
   );
+
+     
 
   wp_enqueue_script(
     'scripts', //handle

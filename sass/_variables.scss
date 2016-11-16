@@ -75,9 +75,7 @@ a:active {
  *    `:before` to contain the top-margins of child elements.
  */
 
-a:focus,
-a:active {outline: red;
-        border:1px solid green;}
+
 
 .clearfix:before,
 .clearfix:after {
@@ -104,45 +102,9 @@ a:active {outline: red;
 //    ========================================================================== */
 
 
-$colorWhite:#fff;
-$colorBlue:#00ffff;
-$colorBlack: #0C1525;
-
-$colorBlackAlpha:rgba(12,21,37,.4);
-$colorBlackAlphaDark:rgba(12,21,37,.8);
-
-$colorBlueMid: red;
-$colorGreen:#607E7E;
-$colorGreenAlpha:rgba(96,126,126,.8);
-$colorGreenAlphaLight:rgba(96,126,126,.4);
-
-$colorYellowAlpha:rgba(246,174,45,.8);
-$colorBlue: rgba(11, 79, 108,1);
-$colorBlueAlpha:rgba(11, 79, 108,.8);
-
-$colorBlue: #1D84B5;
-$colorBlue:#36aa9d;
-$colorBlue:#1AC8ED;
 
 
 
-
-$colorBrown: #8d4849;
-$font-typed:'Ubuntu Mono', monospace;
-$font-contrail:'Contrail One', cursive;
-$font-lato:'Lato', sans-serif;
-$font-oswald:'oswald', san-serif;
-$font-raleway:'raleway',sans-serif;
-$font-main:$font-raleway;
-$logo:$font-contrail;
-$logo:$font-contrail;
-$font-links:$font-contrail;
-$font-anton:anton;
-
-
-
-
-// variables i am using
 
 $colorWhiteOff: #f5f6f7;
 $colorWhite:#fff;
@@ -153,17 +115,18 @@ $colorBlackAlphaMid: rgba(0,0,0,.5);
 $colorBlackAlphaLight: rgba(0,0,0,.3);
 $colorBlackAlphaDark: rgba(0,0,0,.8);
 $colorBlackAlphaDarkest: rgba(0,0,0,.9);
-$colorGreen:#66a35c;
+
 $colorBlue:#00729c;
 $colorBlueAlphaLight:rgba(0,114,156,.4);
 $colorBlueAlpha:rgba(0,114,156,.8);
-$colorButton: $colorGreen;
-$colorButtonBackground:$colorGreen;
+$colorBlueLight:#008cb2;
 
 
 
 $colorMidnight:#002842;
 $colorMidnightAlpha:rgba(0,40,66,.8);
+$colorMidnightAlphaDark:rgba(0,40,66,.95);
+
 
 $colorButton: $colorWhite;
 $colorButtonBackground:$colorWhiteAlpha;
@@ -172,27 +135,25 @@ $fontSource:'Source Sans Pro', sans-serif;
 $fontMain: $fontSource;
 
 $fontClare: 'clarendon';
-// $fontMain:$fontClare;
+
+
+// @font-face {
+//   font-family: 'clarendon';
+//   src: url('fonts/clarendon.eot');
+//   src: local('☺'), url('http://localhost:3000/portfolio/fonts/clarendon.woff') format('woff'), url('http://localhost:3000/portfolio/fonts/clarendon.ttf') format('truetype'), url('http://localhost:3000/portfolio/fonts/clarendon.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: 'clarendon';
-  src: url('fonts/clarendon.eot');
-  src: local('☺'), url('http://localhost:3000/portfolio/fonts/clarendon.woff') format('woff'), url('http://localhost:3000/portfolio/fonts/clarendon.ttf') format('truetype'), url('http://localhost:3000/portfolio/fonts/clarendon.svg') format('svg');
+  src: url('./fonts/clarendon.eot');
+  src: url('./fonts/clarendon.woff') format('woff'), url('./fonts/clarendon.ttf') format('truetype'), url('./fonts/clarendon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 
 
-
-
-@keyframes glowing {
-  from {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 13px $colorGreenAlpha, 0 0 63px $colorGreenAlpha, 0 0 26px $colorGreenAlpha, 0 0 33px $colorGreenAlpha, 0 0 50px $colorGreenAlpha;
-  }
-  to {
-    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 6px $colorGreenAlpha, 0 0 11px $colorGreenAlpha, 0 0 13px $colorGreenAlpha, 0 0 16px $colorGreenAlpha, 0 0 25px $colorGreenAlpha;
-  }
-}
 
 

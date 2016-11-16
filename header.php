@@ -4,6 +4,11 @@
 	<?php // Load Meta ?>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" 
+      type="image/png" 
+      href="./favicons.ico/favicon.ico">
+
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
@@ -40,10 +45,7 @@
   top: 0px;
   width: 100%;
   height: 100%;
- 
-  /*font-size:20rem;*/
   z-index: 9999;
-  /*background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;*/
 }
 
 
@@ -53,11 +55,12 @@
 
 
 
-<header id="home">
+<header>
 
   <div class="header__navigationBar">
     <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+      
+      <a href="#home" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
        <!--  <?php bloginfo( 'name' ); ?> -->
        Clyde<span>Grey</span>
       </a>

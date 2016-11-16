@@ -2,6 +2,28 @@
 var portfolio = {};
 
 
+
+// $('.jarallax').jarallax({
+//     speed: 0.2
+// });
+
+
+// $('.parallax-window').parallax();
+
+
+// $('.parallax-window').parallax({imageSrc: 'http://feelgrafix.com/data/background/background-1.jpg'});
+
+
+
+$(".parallax-window").parallax({
+
+  y: "-10%"
+
+});
+
+
+
+
 $(".workThumbs li").hide();
 $(".workThumbs li").filter(function () {
   return ($(this).attr('data-hide')==='1')
@@ -10,9 +32,6 @@ $(".workThumbs li").filter(function () {
 
 portfolio.init = function(){
 
-
-
-  
 
   $('.btn-svg').each(function(){
     var 
@@ -32,111 +51,18 @@ portfolio.init = function(){
     });
   });
 
-
 $('#workThumbs > li ').hoverdir();
 
-$('.project__word__overlay').each(function(){ 
-  $(this).hoverdir(); 
-});
-
-
-setTimeout(function(){ 
-
-		$('.binary').addClass('all-animate');
-
-	 	$('.binary__typed-1').typed({
-	 		
-             stringsElement: $('#typed-strings1'),
-            typeSpeed: -12,
-            startDelay: 0,
-            showCursor: false,            
-             preStringTyped: function() {
-            	$('.binary__typed-1').removeClass('hide');
-            },
-             callback: function() {
-            	$('.binary__typed-1').addClass('hide');
-            },
-
-	 	});
-
-	 	$('.binary__typed-2').typed({
-	 		
-             stringsElement: $('#typed-strings2'),
-            typeSpeed: -12,
-            startDelay: 400,
-            showCursor: false,
-            preStringTyped: function() {
-            	$('.binary__typed-2').removeClass('hide');
-            },
-            callback: function() {
-            	$('.binary__typed-2').addClass('hide');
-            },
-
-	 	});
-
-	 	$('.binary__typed-3').typed({
-	 		
-             stringsElement: $('#typed-strings3'),
-            typeSpeed: -12,
-            startDelay: 1000,
-            showCursor: false,
-             preStringTyped: function() {
-            	$('.binary__typed-3').removeClass('hide');
-            },
-             callback: function() {
-            	$('.binary__typed-3').addClass('hide');
-            },
-
-	 	});
-
-	 	$('.binary__typed-4').typed({
-	 		
-             stringsElement: $('#typed-strings4'),
-            typeSpeed: -12,
-            startDelay: 1400,
-            showCursor: false,
-             preStringTyped: function() {
-            	$('.binary__typed-4').removeClass('hide');
-            },
-             callback: function() {
-            	$('.binary__typed-4').addClass('hide');
-            },
-
-	 	});
-
-	 	$('.binary__typed-5').typed({
-	 	
-             stringsElement: $('#typed-strings5'),
-            typeSpeed: -12,
-            startDelay: 2000,
-            showCursor: false,
-            preStringTyped: function() {
-            	$('.binary__typed-4').removeClass('hide');
-            },
-             callback: function() {
-            	$('.binary__typed-4').addClass('hide');
-            },
-            
-	 	});
-
-
-	 	$('.checkWork').typed({
-	 
-             stringsElement: $('#typed-strings6'),
-            typeSpeed: -12,
-            startDelay: 3000,
-            showCursor: false,
-            backDelay:4000,
-            preStringTyped: function() {
-            	$('.checkWork').removeClass('hide');
-            },
-          
-	 	});
-	 	setTimeout(function(){ 
-	 		$('.binary__typed').addClass('white');
-	 		$('.checkWork').addClass('arrow');
-	 	}, 4000);
-}, 700);
+    // function headHover() {
+    //     if($(document).width() > 600) {
+    //        $('#workThumbs > li ').hoverdir();
+    //        console.log('large');
+    //        $('#workThumbs > li ').hoverdir();
+    //     } else {
+    //         $('#workThumbs > li ').unbind();
+    //         console.log('small');
+    //     }
+    // }
 
 
 $('a').on('click', function(event) {
@@ -161,8 +87,6 @@ $('.menu-icon').on('click', function(e) {
     var waypoint = new Waypoint({
         element: document.getElementById('skills'),
         handler: function() {
-
-           
             $('#skills').addClass('initiateAnimation');  
            
         },
@@ -180,7 +104,7 @@ $('.menu-icon').on('click', function(e) {
             $('.work').addClass('fadeIn');
             // $('.work').fadeIn(200);
             console.log('entered it');
-              }, 200);
+              }, 100);
 
 
         },
@@ -188,8 +112,14 @@ $('.menu-icon').on('click', function(e) {
     });
 
 
-};
+// headHover();
 
+// $(window).resize(function() {
+//         headHover();
+// });
+
+
+};
 
 
 
@@ -202,7 +132,6 @@ $(window).load(function() {
     portfolio.init();
     
   });
-
 
 
 });

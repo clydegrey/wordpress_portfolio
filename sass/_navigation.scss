@@ -4,40 +4,36 @@
 
 header{
 
-	// background:$colorBlackAlphaDark;
-		max-width:1280px;
-			width:1280px;
+			background:$colorMidnightAlphaDark;
+			width:100%;
 			margin:0 auto;
 			padding:0;
-
+			height:auto;
+			display:block;
+			position:fixed;
+			z-index:20;
 
 .header__navigationBar{
 			max-width:1280px;
 			width:100%;
-			
 			padding:5px 0;
 			margin:0 auto;
+			left:0;
+			right:0;
 			display:flex;
 			flex-wrap:no-wrap;
 			justify-content:space-between;
-			position:fixed;
-			z-index:20;
 			width:100%;
-			background:$colorMidnightAlpha;
+			
 		}
 
  h1 {
 	color:$colorWhite;
 	margin:0;
-	
 	padding:0 1.5rem;
 	font-weight:900;
-	font-size:2.4rem;
-	padding:0 1.8rem;
-	// font-family: 'Source Sans Pro', sans-serif;
-	// font-family:$fontClare;
-	
-
+	font-size:2rem;
+	padding:5px 1.8rem;
  a {
 	font-family:$fontClare;
 	color:$colorWhite;
@@ -45,7 +41,7 @@ header{
 	padding:0;
 	font-weight:900;
 
-	span {color:$colorBlue;
+	span {color:$colorBlueLight;
 		  padding:0 6px;}
 	}
 }
@@ -56,14 +52,11 @@ ul.menu {
 	padding:0;
 	font-size:0;
 	height:100%;
-	// background-color:$colorBlackAlphaDark;
 	li {
 		display: inline-block;
 		margin:0;
 		padding:0;
 		font-size:0;
-		// border:1px solid $colorBlue;
-		
 		a {
 
 
@@ -71,13 +64,13 @@ ul.menu {
 		margin-left: 10px;
 			font-size:1rem;
 			letter-spacing:2px;
-			// font-family:$fontMain;
+		
 			font-family:$fontMain;
 			text-transform:uppercase;
 			color: $colorWhite;
-			 // @include transition-opt;
-			   @include transition-opt($hover-color:$colorBlue,$transition-speed:.3s, $transition-easing: ease-in-out,
-			   	 $transition-color:$colorBlue);
+		
+			   @include transition-opt($hover-color:$colorBlueLight,$transition-speed:.3s, $transition-easing: ease-in-out,
+			   	 $transition-color:$colorBlueLight);
                @include move-vertical;
 		}
 		}
@@ -96,7 +89,7 @@ ul.menu {
        
     }
 
-header  {position:relative;}
+header  {position:fixed;}
 header ul.menu{
 	
 		background:transparent;
@@ -112,17 +105,14 @@ header ul.menu{
 				
 				text-align:right;
 				width:300px;
-				// border:1px solid $colorBlue;
+				
 				justify-content:space-between;
 				li{width:100%;
 					background:$colorMidnightAlpha;
 					margin:0;
-					// border:2px solid $colorBlue;
 					padding:.5rem 1.5rem;
 					color:$colorWhite;
 					text-align:center;
-					
-					
 					a{font-size:3rem;
 
 					}
