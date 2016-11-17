@@ -6,6 +6,7 @@
   color:$colorMidnight;
   position:absolute;
   bottom:0;
+
   
   
 
@@ -14,7 +15,7 @@
 
 span.wpcf7-not-valid-tip{
   position:absolute;
-  bottom:-1.5rem;
+  bottom:-1.4rem;
   color:$colorMidnight;
   left:0;
 }
@@ -69,7 +70,7 @@ h2{
   p {line-height:1.8;
     font-size:1.2rem;
     color:$colorBlack;
-    font-weight:600;
+    font-weight:400;
     padding:0 60px 0 2px;
     position:relative;
     color:$colorMidnight;
@@ -77,7 +78,7 @@ h2{
   a {
     color:$colorBlue;
     transition:color .3s ease;
-    font-weight:800;
+    font-weight:600;
      @include transition-opt($hover-color:$colorMidnight,
            $transition-color:$colorMidnight,$transition-speed:.3s, $transition-easing: ease-in-out);
                @include underline-closing;
@@ -88,6 +89,9 @@ h2{
  display:inline-block;
  width:100%;
  margin-top:40px;
+ padding:0 10px;
+ background:$colorWhiteOff;
+
  p{margin:0;}
 
 
@@ -100,8 +104,8 @@ textarea{
   display:inline-block;
   width:100%;
   background:$colorWhiteOff;
-  font-size:1.3rem;
-  margin:0!important;
+  font-size:1.2rem;
+  margin:0;
   color:$colorMidnight;
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
@@ -110,8 +114,8 @@ textarea{
   outline: none;
   padding:1rem;
   margin: 5px 1px 3px 0px;
-  border: 1px solid transparent;
-  border-bottom:3px solid $colorMidnight;
+  border: none;
+  border-bottom:1px solid $colorMidnight;
 }
   textarea{border:none;}
   textarea:focus::-webkit-input-placeholder,
@@ -155,15 +159,15 @@ textarea{
               letter-spacing:1px;
               border:none;
               position:absolute;
-              bottom:40px;
+              bottom:16px;
               left:16px;
-              border-bottom:3px solid $colorMidnight;
+              border-bottom:1px solid $colorMidnight;
               font-size:1.3rem;
               transition:all .3s ease;
               &:hover{
                 background:$colorMidnight;
                 color:$colorWhite;
-                border-bottom:3px solid $colorMidnight;
+                border-bottom:1px solid $colorMidnight;
               }
             }
 }
