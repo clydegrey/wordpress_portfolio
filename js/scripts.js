@@ -2,28 +2,21 @@
 var portfolio = {};
 
 
-
-// $('.jarallax').jarallax({
-//     speed: 0.2
-// });
-
-
-// $('.parallax-window').parallax();
-
-
-// $('.parallax-window').parallax({imageSrc: 'http://feelgrafix.com/data/background/background-1.jpg'});
-
-
-
-$(".parallax-window").parallax({
-
-  y: "-10%"
-
+// scroll to top of page on unload so animation of work section can repeat
+$(window).on('unload', function() {
+   $(window).scrollTop(0);
 });
 
 
 
+// parallax of hero image
+$(".parallax-window").parallax({
+  y: "-34%"
+});
 
+
+
+// added data button to wordpress dashboard so I can toggle elements on and off
 $(".workThumbs li").hide();
 $(".workThumbs li").filter(function () {
   return ($(this).attr('data-hide')==='1')
@@ -53,17 +46,8 @@ portfolio.init = function(){
 
 $('#workThumbs > li ').hoverdir();
 
-    // function headHover() {
-    //     if($(document).width() > 600) {
-    //        $('#workThumbs > li ').hoverdir();
-    //        console.log('large');
-    //        $('#workThumbs > li ').hoverdir();
-    //     } else {
-    //         $('#workThumbs > li ').unbind();
-    //         console.log('small');
-    //     }
-    // }
 
+// smooth scroll to links
 
 $('a').on('click', function(event) {
 

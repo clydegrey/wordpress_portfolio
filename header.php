@@ -16,7 +16,7 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body id="home" <?php body_class(); ?>>
 
 
 <!-- <div class="se-pre-con">tttttt</div> -->
@@ -60,7 +60,7 @@
   <div class="header__navigationBar">
     <h1>
       
-      <a href="#home" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+      <a href="http://clyde.codes" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
        <!--  <?php bloginfo( 'name' ); ?> -->
        Clyde<span>Grey</span>
       </a>

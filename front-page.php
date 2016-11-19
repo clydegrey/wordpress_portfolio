@@ -25,7 +25,7 @@ $hero = get_field('hero_image');
 if( !empty($hero) ): ?>
 
 <!-- <img class="binary__back" src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" /> -->
-<div class="hero__image" id="home">
+<div class="hero__image">
 <img class="binary__imagex" src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" />
 </div>
 
